@@ -56,7 +56,9 @@ class ShippingMethod {
 
 export function priceOrder(product: Product, shippingMethod: ShippingMethod) {
   const shippingCost = shippingMethod.calculateShippingCost(product);
-  return product.totalPrice + shippingCost;
+  const result = product.totalPrice + shippingCost;
+  console.log({ result });
+  return result;
 }
 
 // 사용 예:
